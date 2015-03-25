@@ -13,7 +13,6 @@ ini_set('display_errors', 1);
 
 function post_published_notification( $ID, $post) {
   $permalink = get_permalink( $ID );
-  $pfx_date = get_the_date('d/m/Y');
   $file = '/var/www/wordpress/wp-content/plugins/notify-publish/append.txt';
   list($data, $data1) = explode("?", $permalink);
   $noDelay_url = get_option('nodelay_url');
